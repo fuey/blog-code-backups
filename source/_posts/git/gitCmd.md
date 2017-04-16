@@ -15,4 +15,8 @@ categories: git
 * `git commit -m "notes"` 为本次提交加注释(即本次提交的代码主要简介)
 * `git remote add origin https://github.com/***/***.git` 创建远程仓库，并为仓库命名,**origin**为仓库的别名(origin则设为默认主机)，用于将来引用,此处的**url**为git上事先创建好的url地址
 * `git push -u origin master` 本地的master分支推送到origin主机的master分支
-* 待更新...
+* `git pull --rebase origin master` 代码合并
+* `git config --global --unset http.proxy` （出现这个错误时：`fatal: unable to access 'https://github.com/fuey/blog-code-backups.git/': Couldn't resolve host 'github.com'`，然后再提交就行了）
+
+## 提交分支一般步骤
+* `git add .`、`git commit -m "notes"`、`git remote add origin https://github.com/***/***.git`、 `git pull --rebase origin master`、`git push -u origin master`，顺序执行即可
